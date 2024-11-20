@@ -18,7 +18,7 @@ int main() {
     User user(username, password);
     PasswordManager pm(username + "_data.csv");  // Create PasswordManager using username-based file
 
-    PasswordManager* model = new PasswordManager("credentials.txt");
+    PasswordManager* model = new PasswordManager(username + "_data.csv");
     View* view = new View();
     Controller* controller = new Controller(model, view);
 
